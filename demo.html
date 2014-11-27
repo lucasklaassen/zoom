@@ -27,41 +27,34 @@
 		}
 
 		.zoom img {
-			display: block;
+			display:block;
+		}
+
+		.zoomImg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			border: none;
+			max-width: none;
+			max-height: none;
+			background: #fff;
 		}
 
 		.zoom img::selection { background-color: transparent; }
-
-		#ex2 img:hover { cursor: url(grab.cur), default; }
-		#ex2 img:active { cursor: url(grabbed.cur), default; }
 	</style>
 	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
 	<script src='jquery.zoom.js'></script>
 	<script>
 		$(document).ready(function(){
-			$('#ex1').zoom();
-			$('#ex2').zoom({ on:'grab' });
-			$('#ex3').zoom({ on:'click' });			 
-			$('#ex4').zoom({ on:'toggle' });
+			$('#productZoom').zoom();
 		});
 	</script>
 </head>
 <body>
-	<span class='zoom' id='ex1'>
-		<img src='daisy.jpg' width='555' height='320' alt='Daisy on the Ohoopee'/>
-		<p>Hover</p>
-	</span>
-	<span class='zoom' id='ex2'>
-		<img src='roxy.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
-		<p>Grab</p>
-	</span>
-	<span class='zoom' id='ex3'>
-		<img src='daisy.jpg' width='555' height='320' alt='Daisy on the Ohoopee'/>
+	<span class='zoom' id='productZoom'>
+		<img src='http://twiveo.vin65.com/assets/images/products/pictures/Merlot.png' product-zoom="http://twiveo.vin65.com/assets/images/products/originals/Merlot.png" width='130' height='405' alt='Daisy on the Ohoopee'/>
 		<p>Click to activate</p>
-	</span>
-	<span class='zoom' id='ex4'>
-		<img src='roxy.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
-		<p>Click to toggle</p>
 	</span>
 </body>
 </html>
